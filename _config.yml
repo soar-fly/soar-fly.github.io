@@ -1,0 +1,14 @@
+title: My GitHub Pages Site
+description: A clean, modern GitHub Pages template
+baseurl: ""
+url: "https://soar-fly.github.io"
+theme: jekyll-theme-minimal
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Custom variables
+github_username: soar-fly
