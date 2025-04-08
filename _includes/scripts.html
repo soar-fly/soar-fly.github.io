@@ -1,0 +1,21 @@
+<script>
+    // 响应式导航菜单
+    document.addEventListener('DOMContentLoaded', function() {
+      var navTrigger = document.getElementById('nav-trigger');
+      var menuIcon = document.querySelector('.menu-icon');
+      
+      menuIcon.addEventListener('click', function() {
+        navTrigger.checked = !navTrigger.checked;
+      });
+      
+      // 平滑滚动
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+    </script>
