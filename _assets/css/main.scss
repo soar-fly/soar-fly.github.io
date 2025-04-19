@@ -2,6 +2,18 @@
 # Only the main Sass file needs front matter
 ---
 
+---
+---
+
+@import "minima";s
+@import "custom/home";  // 新增自定义样式
+@import "custom/syntax"; // 可选：代码高亮优化
+
+// 基础变量扩展
+$text-color: #333;
+$background-color: #f9f9f9;
+$brand-color: #2e86de;s
+
 @import "minima";
 
 // 自定义样式覆盖
