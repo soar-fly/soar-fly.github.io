@@ -1,0 +1,102 @@
+// 代码块基础样式
+.highlight {
+  margin: 1.5em 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  pre {
+    margin: 0;
+    padding: 1.2em;
+    overflow-x: auto;
+    font-family: $code-font-family;
+    font-size: 0.9em;
+    line-height: 1.6;
+    background-color: #282c34 !important; // 深色背景
+    color: #abb2bf;
+
+    // 滚动条样式（仅支持Webkit）
+    &::-webkit-scrollbar {
+      height: 8px;
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+    }
+  }
+}
+
+// 行号样式
+.lineno {
+  color: #636d83;
+  padding-right: 1.2em;
+  user-select: none;
+}
+
+// 语法高亮颜色配置
+.highlight {
+  // 注释
+  .c, .cm, .cp, .c1 { color: #5c6370; font-style: italic; }
+
+  // 关键字
+  .k, .kv, .kc, .kd, .kn, .kp, .kr, .kt { color: #c678dd; }
+
+  // 字符串
+  .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx { color: #98c379; }
+
+  // 数字
+  .m, .mf, .mh, .mi, .il, .mo { color: #d19a66; }
+
+  // 函数
+  .nf, .na, .nb, .bp, .nc, .no, .nd, .ni, .ne, .nl { color: #61afef; }
+
+  // 运算符
+  .o, .ow { color: #56b6c2; }
+
+  // 标点符号
+  .p { color: #abb2bf; }
+
+  // 错误
+  .err { color: #e06c75; background-color: #3e4451; }
+}
+
+// 内联代码样式
+code:not([class]) {
+  background-color: rgba(175, 184, 193, 0.2);
+  color: #e06c75;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 85%;
+}
+
+// 代码标题（可选）
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #21252b;
+  color: #9da5b3;
+  padding: 0.5em 1em;
+  font-family: $code-font-family;
+  font-size: 0.8em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  .code-title {
+    font-weight: bold;
+  }
+
+  .copy-button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 0.9em;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
