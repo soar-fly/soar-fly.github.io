@@ -41,3 +41,8 @@
     gap: 2rem;
   }
 }
+
+.hero {
+  border: 3px solid red; /* 测试样式是否加载 */
+  background-image: url('/assets/images/hero-bg.jpg');
+}
