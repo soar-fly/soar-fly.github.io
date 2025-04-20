@@ -1,38 +1,23 @@
 ---
 layout: default
 ---
-<!-- 新增：全屏英雄区域 -->
-<section class="hero" style="background-image: url('/assets/images/hero-bg.jpg');">
+<!-- 英雄区域 -->
+<section class="hero" style="background-image: url('/assets/images/hero-bg.jpg')">
   <div class="hero-content">
     <h1>{{ site.title }}</h1>
     <p class="subtitle">{{ site.description }}</p>
-    <a href="#featured-posts" class="btn">探索内容</a>
+    <a href="#posts" class="btn">{{ site.home.hero_button_text }}</a>
   </div>
 </section>
 
-<!-- 新增：特色内容区 -->
-<section id="featured-posts" class="featured-section">
+<!-- 文章网格 -->
+<section id="posts" class="post-grid">
   <div class="container">
-    <h2 class="section-title">最新文章</h2>
-    <div class="post-grid">
-      {% for post in site.posts limit:3 %}
-        <article class="post-card">
-          <div class="post-image" style="background-image: url('{{ post.image | default: '/assets/images/default-post.jpg' }}')"></div>
-          <div class="post-content">
-            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-            <time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-            <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
-          </div>
-        </article>
+    <h2>Latest Posts</h2>
+    <div class="grid">
+      {% for post in site.posts limit: site.home.featured_posts %}
+        {% include post-card.html post=post %}
       {% endfor %}
     </div>
-  </div>
-</section>
-
-<!-- 新增：CTA区域 -->
-<section class="cta-section">
-  <div class="container">
-    <h2>想了解更多？</h2>
-    <a href="/about" class="btn btn-outline">关于我们</a>
   </div>
 </section>

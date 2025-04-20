@@ -11,4 +11,10 @@ plugins:
   - jekyll-seo-tag
 
 # Custom variables
-github_username: soar-fly
+author:
+  name: "soar-fly"
+  email: "feiyang.chen.life@outlook.com"
+
+home:
+  featured_posts: 3
+  hero_button_text: "Explore More"
