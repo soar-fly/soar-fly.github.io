@@ -1,6 +1,6 @@
 title: My GitHub Pages Site
 description: A clean, modern GitHub Pages template
-baseurl: ""
+baseurl: ".soar-fly.github.io"
 url: "https://soar-fly.github.io"
 theme: jekyll-theme-minimal
 
